@@ -25,7 +25,63 @@ layout: default
       </li>
       {%- endfor -%}
     </ul>
-
   {%- endif -%}
 
+  <section class="about">
+    <h2>About</h2>
+    <p><a href="{{ '/_posts/about.md' | relative_url }}">About</a></p>
+  </section>
 </div>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .home {
+    padding: 20px;
+  }
+
+  .page-heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .post-list-heading {
+    margin-top: 40px;
+  }
+
+  .post-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .post-link {
+    text-decoration: none;
+    color: #0066cc;
+  }
+
+  .post-link:hover {
+    text-decoration: underline;
+  }
+
+  .about {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+  }
+
+  header {
+    background-color: #add8e6; /* Light blue */
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+</style>
