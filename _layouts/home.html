@@ -3,6 +3,14 @@ layout: default
 ---
 
 <div class="home">
+  <header>
+    <h1 class="site-title">The Amor Fati - Blog Home</h1>
+    <div class="about-top">
+      <h2>About</h2>
+      <p><a href="{{ '/_posts/about.md' | relative_url }}">About</a></p>
+    </div>
+  </header>
+
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
@@ -26,11 +34,6 @@ layout: default
       {%- endfor -%}
     </ul>
   {%- endif -%}
-
-  <section class="about">
-    <h2>About</h2>
-    <p><a href="{{ '/_posts/about.md' | relative_url }}">About</a></p>
-  </section>
 </div>
 
 <style>
@@ -41,6 +44,42 @@ layout: default
 
   .home {
     padding: 20px;
+  }
+
+  header {
+    background-color: #add8e6; /* Light blue */
+    padding: 10px 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  .site-title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+
+  .about-top {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    text-align: right;
+  }
+
+  .about-top h2 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .about-top a {
+    text-decoration: none;
+    color: #0066cc;
+    font-size: 14px;
+  }
+
+  .about-top a:hover {
+    text-decoration: underline;
   }
 
   .page-heading {
@@ -71,17 +110,5 @@ layout: default
     padding: 20px;
     background-color: #f0f8ff;
     border-radius: 8px;
-  }
-
-  header {
-    background-color: #add8e6; /* Light blue */
-    padding: 10px 20px;
-    text-align: center;
-  }
-
-  header h1 {
-    margin: 0;
-    font-size: 24px;
-    color: #333;
   }
 </style>
